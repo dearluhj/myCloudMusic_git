@@ -1,0 +1,14 @@
+/**app.wxss**/
+/* 图标引入 */
+@import "/static/wxss/iconfont.wxss";
+@import "/static/wxss/iconfont2.wxss";
+
+page {
+  height: 100%;
+}
+::-webkit-scrollbar {
+  /* display: none;
+  width: 0;
+  height: 0;
+  color: transparent; */
+}

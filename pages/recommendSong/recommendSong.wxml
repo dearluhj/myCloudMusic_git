@@ -1,0 +1,41 @@
+<!--pages/recommendSong/recommendSong.wxml-->
+<view class="recommendSongcontainer">
+  <view class="recommendHeader">
+    <image src="/static/image/recommendSong/recommendSong.jpg" mode="aspectFill" />
+    <view class="datetime">
+      <text>{{today}}</text>
+    </view>
+  </view>
+  <view class="recommendList">
+    <view class="header">
+      <view class="">
+        <navigator open-type="reLaunch" url="/pages/index/index">
+          <text>播放全部</text>
+        </navigator>
+      </view>
+      <view class="">
+        <text>添加全部</text>
+      </view>
+    </view>
+    <view class="Listview">
+      <scroll-view scroll-y enhanced show-scrollbar="{{false}}" class="scrollview">
+        <view class="listitem" wx:for="{{recommendSonglist.dailySongs}}" wx:key="id">
+          <view class="cover" data-id="{{item.id}}" data-index="{{index}}" bindtap="handletosongPlaydetail">
+            <image src="{{item.al.picUrl}}" mode="" />
+          </view>
+          <view class="song" data-id="{{item.id}}" data-index="{{index}}" bindtap="handletosongPlaydetail">
+            <view class="songname">
+              {{item.name}}
+            </view>
+            <view class="arname">
+              {{item.ar[0].name}}
+            </view>
+          </view>
+          <view class="more">
+            <text class="iconfont icon-gengduo"></text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

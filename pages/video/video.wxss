@@ -1,0 +1,138 @@
+/* pages/video/video.wxss */
+.videoContainer {
+  padding: 15rpx 15rpx 0;
+}
+
+.videoContainer .topNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topNav .centeritem {
+  flex-grow: 1;
+  height: 50rpx;
+  margin: 0 15rpx;
+  color: #da6666;
+  border-radius: 10rpx;
+  border: 2rpx solid #da000034;
+  text-align: center;
+}
+
+.topNav .centeritem text {
+  line-height: 50rpx;
+}
+
+.topNav .imgitem {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.topNav .imgitem image {
+  width: 100%;
+  height: 100%;
+}
+
+.tab {
+  padding: 0 10rpx;
+}
+
+.tab .tabscrollView {
+  display: flex;
+  height: 60rpx;
+}
+
+.tab .tabscrollView .tabItem {
+  margin: 0 80rpx 0 0;
+  white-space: nowrap;
+}
+
+.tab .tabscrollView .tabItem text {
+  display: block;
+  line-height: 56rpx;
+  font-size: 26rpx;
+  color: #535353;
+  box-sizing: border-box;
+}
+
+.tab .tabscrollView .tabItem text.active {
+  border-bottom: 4rpx solid #da6666;
+}
+
+.videoListcontainer {
+  padding: 15rpx;
+  height: calc(100vh - 139rpx);
+  box-sizing: border-box;
+}
+
+.videoListcontainer .scrollview {
+  width: 100%;
+  height: 100%;
+}
+
+.videoListcontainer .videoItem {
+  margin-bottom: 25rpx;
+}
+
+.videoListcontainer .videoItem video,
+.videoListcontainer .videoItem image {
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+.videoItem .topmsg {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.videoItem .topmsg .alname {
+  display: flex;
+  align-items: center;
+  color: #535353;
+  font-size: 26rpx;
+}
+
+.videoItem .topmsg .alname image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+  margin-right: 15rpx;
+}
+
+.videoItem .topmsg .rightcomment {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.videoItem .topmsg .rightcomment .item {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 10rpx;
+}
+
+.videoItem .topmsg .rightcomment .item button {
+  width: auto;
+  height: auto;
+  padding: 0;
+  background: transparent;
+}
+
+.videoItem .topmsg .rightcomment text.iconfont {
+  font-size: 44rpx;
+}
+
+.videoItem .topmsg .rightcomment text.count {
+  font-size: 20rpx;
+  line-height: 1;
+  display: inline-block;
+}
+
+.videoItem .title {
+  border-radius: 10rpx;
+  box-shadow: 0 5rpx 10rpx rgba(0, 0, 0, 0.1);
+  padding: 10rpx 5rpx;
+  color: #535353;
+  font-size: 26rpx;
+}

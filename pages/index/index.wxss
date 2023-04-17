@@ -1,0 +1,125 @@
+/* pages/index/index.wxss */
+
+/* 轮播图 */
+.swiperContainer{
+  width: 100%;
+  height: 400rpx;
+}
+.swiperContainer .swiperImg image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 导航栏 */
+.navContainer{
+  display: flex;
+}
+.navContainer .navItem{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navContainer .iconfont{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  font-size: 50rpx;
+  margin: 20rpx 0;
+  background-color: #da0000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navContainer text{
+  font-size: 26rpx;
+}
+
+.recommendContainer {
+  padding: 20rpx;
+}
+.recommendScroll{
+  display: flex;
+  align-items: flex-start;
+  padding: 20rpx 0;
+}
+.recommendScroll .iTem{
+  width: 200rpx;
+  margin-right: 16rpx;
+}
+.recommendScroll .iTem image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.recommendScroll .iTem text{
+  /* 多行文本溢出 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+/* 排行榜 */
+.topranking{
+  padding: 0 20rpx 20rpx;
+}
+.toplistcontainer{
+  min-height: 600rpx;
+  margin-top: 10rpx;
+}
+.toplistcontainer .listitem{
+  border-radius: 20rpx;
+  background-color: rgba(206, 206, 206, 0.25);
+  overflow: hidden;
+  width: 94%;
+}
+.toplistcontainer .bangdan{
+  padding: 20rpx;
+}
+.toplistcontainer .title{
+  display: block;
+  line-height: 1;
+  padding: 20rpx;
+  font-size: 30rpx;
+  background-color: rgba(206, 206, 206, 0.1);
+  color: rgb(22, 22, 22);
+  margin-bottom: 15rpx;
+}
+.toplistcontainer .title::after{
+  content: ">";
+  display: inline-block;
+  margin-left: 15rpx;
+}
+.toplistcontainer .contentbox .img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.toplistcontainer .contentbox{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+.toplistcontainer .contentbox .count{
+  padding: 0 40rpx;
+}
+.toplistcontainer .contentbox .wenben{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 400rpx;
+}
+.toplistcontainer .contentbox .wenben .songname{
+  font-size: 26rpx;
+  color: #242424;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.toplistcontainer .contentbox .wenben .arname{
+  font-size: 22rpx;
+  color: #636363;
+}

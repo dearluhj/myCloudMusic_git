@@ -1,0 +1,45 @@
+<!--pages/songPlaydetail/songPlaydetail.wxml-->
+<view class="songPlaycontainer">
+  <view class="song">
+    <view class="songname">
+      {{musicDetail.songs[0].name}}
+    </view>
+    <view class="arname">
+      <text wx:for="{{musicDetail.songs[0].ar}}" wx:key="id">{{(index?'/':'')+item.name}}</text>
+    </view>
+  </view>
+  <view class="discCircle">
+    <view class="needle {{isPlay?'active':''}}">
+      <image src="/static/image/song/needle.png" mode="" />
+    </view>
+    <view class="discCover {{isPlay?'active':'paused'}}">
+      <image class="disc" src="/static/image/song/disc.png" mode="" />
+      <image class="cover" src="{{musicDetail.songs[0].al.picUrl||'/static/image/personal/missing-face.png'}}" mode="" />
+    </view>
+  </view>
+  <view class="musicProgressbar">
+    <view class="startTime">
+      {{currentPlaytime}}
+    </view>
+    <view class="controlBar">
+      <view bindtouchcancel="handleProgressout" bindtouchend="handleProgressout" bindtouchstart="handleProgressin" bindtouchmove="handleProgressmove" class="currentProgress" style="{{'width:'+progressBarlength+'rpx'}}">
+        <view class="controlCircle">
+        </view>
+      </view>
+    </view>
+    <view class="endTime">
+      {{musicTotaltime}}
+    </view>
+  </view>
+  <view class="musicControl">
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle"></text>
+    <text class="iconfont icon-shangyishou" data-name="pre" data-id="" bindtap="handleSwitchmusic"></text>
+    <text class="iconfont {{!isPlay?'icon-bofang': 'icon-pause'}} big" bindtap="handleMusicPlay"></text>
+    <text class="iconfont icon-next" data-name="next" bindtap="handleSwitchmusic"></text>
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
+  </view>
+  <!-- 背景图 -->
+  <view class="backCover">
+    <image src="{{musicDetail.songs[0].al.picUrl}}" mode="aspectFill" />
+  </view>
+</view>

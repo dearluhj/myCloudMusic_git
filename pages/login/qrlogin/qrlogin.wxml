@@ -1,0 +1,14 @@
+<!--pages/login/qrlogin/qrlogin.wxml-->
+<view class="prev">
+  <navigator target="self" hover-class="none" open-type="redirect" url="/pages/login/passwordlogin/login">返回账号密码登录</navigator>
+</view>
+<view class="imagebox">
+  <view>
+    <text>请使用手机版网易云音乐扫码</text>
+  </view>
+  <image wx:if="{{currentqrStatus}}" bindtap="getqrimage" src="{{imageUrl}}" mode="" />
+  <image wx:if="{{!currentqrStatus}}" src="/static/image/waiting.png" mode=""/>
+  <view class="updateqrimg">
+    <text>{{qrstatueMsg}}</text>
+  </view>
+</view>

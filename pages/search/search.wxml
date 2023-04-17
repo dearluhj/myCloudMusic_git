@@ -1,0 +1,48 @@
+<!--pages/search/search.wxml-->
+<view class="searchContainer">
+  <view class="searchHeader">
+    <view class="search" bindtap="goSearch">
+      <text class="iconfont icon-search"></text>
+    </view>
+    <view class="searchbox">
+      <input type="text" placeholder-class="placeholder" placeholder="{{defaultSearch}}" bindinput="handleInput" model:value="{{searchValue}}" />
+    </view>
+    <view class="cancle">
+      <navigator open-type="navigateBack" hover-class="none" delta="1">取消</navigator>
+    </view>
+  </view>
+  <!-- 历史记录 -->
+  <view class="searchHistory" wx:if="{{searchHistorylist.length}}">
+    <view class="historytitle">
+      <text>历史记录</text>
+      <text class="iconfont icon-shanchu" bindtap="clearHistory"></text>
+    </view>
+    <view class="historycontent">
+      <view class="item" wx:for="{{searchHistorylist}}" wx:key="timeStamp">
+        {{item.value}}
+      </view>
+    </view>
+  </view>
+  <view class="trendingSearch">
+    <view class="title">热搜榜</view>
+    <view class="trendContent">
+      <view class="item" wx:for="{{topSearchlist}}" wx:key="searchWord">
+        <text>{{index+1}}</text>
+        <text class="name">{{item.searchWord}}</text>
+        <image wx:if="{{item.iconUrl}}" src="{{item.iconUrl}}" mode="" />
+      </view>
+    </view>
+  </view>
+  <!-- 搜索列表建议 -->
+  <view wx:if="{{searchValue}}" class="searchSuggest">
+    <view class="title">
+      {{'搜索内容："'+searchValue+'"'}}
+    </view>
+    <view class="suggestlist">
+      <view class="item" wx:for="{{searchSuggestlist.allMatch}}" wx:key="keyword">
+        <text class="iconfont icon-search"></text>
+        <text class="name">{{item.keyword}}</text>
+      </view>
+    </view>
+  </view>
+</view>

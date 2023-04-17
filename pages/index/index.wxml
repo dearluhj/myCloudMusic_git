@@ -1,0 +1,68 @@
+<view>
+  <!-- 轮播图 -->
+  <swiper class="swiperContainer" circular autoplay indicator-active-color="#da0000" indicator-dots indicator-color="#fff">
+    <swiper-item class="swiperImg" wx:for="{{bannerList.banners}}" wx:key="bannerId">
+      <image src="{{item.pic}}"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 导航栏控件 -->
+  <view class="navContainer">
+    <view class="navItem">
+      <navigator url="/pages/recommendSong/recommendSong" open-type="navigate">
+        <text class="iconfont icon-gedan"></text>
+        <text>每日推荐</text>
+      </navigator>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-tubiao_dianzan"></text>
+      <text>歌单</text>
+    </view>
+    <view class="navItem" bindtap="handletest">
+      <text class="iconfont icon-paihangbang"></text>
+      <text>排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-diantai"></text>
+      <text>电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-zhibobofangshexiangjitianxianxianxing"></text>
+      <text>直播</text>
+    </view>
+  </view>
+  <!-- 推荐页 -->
+  <view class="recommendContainer">
+    <navHeader title="推荐歌单" content="为你精心推荐"></navHeader>
+    <scroll-view class="recommendScroll" scroll-left="1" scroll-x enable-flex enhanced show-scrollbar="{{false}}">
+      <view class="iTem" wx:for="{{personalList.result}}" wx:key="id">
+        <image src="{{item.picUrl}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 排行榜 -->
+  <view class="topranking">
+    <navHeader title="排行榜" content="热歌风向标"></navHeader>
+    <swiper class="toplistcontainer" next-margin="25rpx">
+      <swiper-item wx:for="{{toprankList}}" wx:key="id">
+        <view class="listitem">
+          <text class="title">{{item.name}}</text>
+          <view class="bangdan">
+            <view class="contentbox" wx:for="{{item.tracks}}" wx:for-item="trackItem" wx:for-index="trackIndex" wx:key="id">
+              <image class="img" src="{{trackItem.al.picUrl}}" mode="" />
+              <text class="count">{{trackIndex+1}}</text>
+              <view class="wenben">
+                <text class="songname">{{trackItem.name}}</text>
+                <view class="arname">
+                  <text wx:for="{{trackItem.ar}}" wx:for-item="arItem" wx:for-index="arIndex" wx:key="id"><text wx:if="{{arIndex>0}}">/</text><text>{{arItem.name}}</text></text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 排行榜 -->
+
+</view>

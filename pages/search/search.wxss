@@ -1,0 +1,137 @@
+/* pages/search/search.wxss */
+.searchContainer {
+  padding: 15rpx;
+  position: relative;
+}
+
+.searchContainer .searchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchHeader .search {
+  font-size: 36rpx;
+  color: #535353;
+}
+
+.searchHeader .searchbox {
+  flex-grow: 1;
+  margin: 0 15rpx;
+  background-color: rgba(226, 226, 226, 0.2);
+  font-size: 26rpx;
+  border-radius: 10rpx;
+}
+
+.searchHeader .searchbox input {
+  padding: 10rpx;
+}
+.searchHeader .searchbox .placeholder{
+  color: #d1d1d1;
+}
+.searchHeader .cancle {
+  color: #535353;
+  font-size: 26rpx;
+}
+
+/* 热搜榜 */
+.searchContainer .trendingSearch {
+  padding: 15rpx 0;
+}
+
+.trendingSearch .title {
+  font-size: 32rpx;
+  color: #535353;
+  padding: 15rpx 0;
+  border-bottom: 2rpx solid #cecece;
+}
+
+.trendingSearch .trendContent {
+  padding: 15rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.trendingSearch .trendContent .item {
+  width: calc(50% - 30rpx);
+  font-size: 26rpx;
+  margin-bottom: 40rpx;
+  padding-right: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.trendingSearch .trendContent .item image {
+  width: 52rpx;
+  height: 26rpx;
+}
+
+.trendingSearch .trendContent .item text.name {
+  padding: 0 10rpx;
+  max-width: calc(100% - 80rpx);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* 搜索建议列表 */
+.searchSuggest{
+  position: absolute;
+  top: 100rpx;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 20rpx;
+}
+.searchSuggest .title{
+  padding-bottom: 15rpx;
+  font-size: 26rpx;
+  color: #535353;
+}
+.searchSuggest .suggestlist{
+  padding: 15rpx;
+}
+.searchSuggest .suggestlist .item{
+  font-size: 26rpx;
+  color: #535353;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.searchSuggest .suggestlist .item text.name{
+  margin-left: 15rpx;
+  width: calc(100% - 100rpx);
+  letter-spacing: 2rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* 历史记录样式 */
+.searchHistory{
+  padding: 15rpx;
+}
+.searchHistory .historytitle{
+  font-size: 24rpx;
+  color: #535353;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.searchHistory .historycontent{
+  padding: 15rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.searchHistory .historycontent .item{
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  color: #535353;
+  background-color: #ececec;
+  border-radius: 20rpx;
+  margin: 0 15rpx 15rpx 0;
+}
+
+

@@ -1,0 +1,20 @@
+/* pages/login/qrlogin/qrlogin.wxss */
+.prev{
+  padding: 20rpx;
+  color: #4399fc;
+}
+.imagebox{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.imagebox image{
+  width: 400rpx;
+  height: 400rpx;
+}
+.imagebox .updateqrimg{
+  color: #4399fc;
+}
